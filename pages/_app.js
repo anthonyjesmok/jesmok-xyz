@@ -11,7 +11,11 @@ import { datadogRum } from '@datadog/browser-rum'
 import firebase from '../util/firebase';
 
 // Styles
-import '../styles/style.css';
+import { Theme } from '@carbon/react';
+import '../styles/app.scss';
+
+// Components
+import NavHeader from '../components/layout/NavHeader';
 
 // Initialize App
 function MarshmallowApp({ Component, pageProps }) {
@@ -27,9 +31,14 @@ function MarshmallowApp({ Component, pageProps }) {
 
   // Return App
   return (
-    <main>
-      <Component {...pageProps} />
-    </main>
+    <Theme theme="g90">
+      <header>
+        <NavHeader />
+      </header>
+      <main>
+        <Component {...pageProps} />
+      </main>
+    </Theme>
   )
 }
 
