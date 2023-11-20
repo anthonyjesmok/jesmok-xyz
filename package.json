@@ -28,7 +28,7 @@
     "@babel/eslint-parser": "^7.22.9",
     "@datadog/browser-rum": "^4.46.0",
     "@firebase/performance": "^0.6.4",
-    "@types/node": "^20.4.8",
+    "@types/node": "^20.9.2",
     "@types/react": "^18.2.18",
     "@typescript-eslint/eslint-plugin": "^6.4.0",
     "@typescript-eslint/parser": "^6.4.0",
