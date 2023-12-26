@@ -1,1 +1,13 @@
-@use '@carbon/react';
+/* Import the Carbon Framework With Custom Colors */
+@use '@carbon/react' with (
+  $theme: (
+    background: #083F63,
+    text-primary: #FFFFFF,
+    text-secondary: #FFFFFF,
+    text-inverse: #000000,
+  )
+);
+
+/* Use the Carbon Grid */
+@use '@carbon/grid';
+@include grid.flex-grid();

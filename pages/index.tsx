@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import { Grid, Column } from '@carbon/react';
 
 // export async function getStaticProps() {}
 
@@ -8,9 +9,14 @@ export default function IndexPage() {
       <Head>
         <title>Anthony Jesmok | Home | jesmok.xyz</title>
       </Head>
-      <div>
-        <p>Something will be here soon.</p>
-      </div>
+      <Grid fullWidth>
+        <Column>
+          <h1>Home</h1>
+        </Column>
+        <Column>
+          <h1>Image</h1>
+        </Column>
+      </Grid>
     </>
   );
 }

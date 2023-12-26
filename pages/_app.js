@@ -9,11 +9,11 @@ import { getPerformance } from '@firebase/performance';
 import firebase from '../util/firebase';
 
 // Styles
-import { Theme } from '@carbon/react';
 import '../styles/app.scss';
 
 // Components
-import NavHeader from '../components/layout/NavHeader';
+import NavHeader from '../components/layout/header/NavHeader.tsx';
+import { Content } from '@carbon/react';
 
 // Initialize App
 function MarshmallowApp({ Component, pageProps }) {
@@ -25,14 +25,12 @@ function MarshmallowApp({ Component, pageProps }) {
 
   // Return App
   return (
-    <Theme theme="g90">
-      <header>
-        <NavHeader />
-      </header>
-      <main>
+    <>
+      <NavHeader />
+      <Content>
         <Component {...pageProps} />
-      </main>
-    </Theme>
+      </Content>
+    </>
   )
 }
 
