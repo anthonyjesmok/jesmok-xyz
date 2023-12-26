@@ -7,11 +7,10 @@ echo "=== Instaling NPM Packages..."
 npm install;
 echo "=== Instaling Husky Hooks..."
 husky install;
-echo "=== Logging Into Firebase..."
-firebase login;
-echo "=== Initializing New Firebase Hosting Project..."
+echo "=== Initializing New Firebase Project..."
 echo "!!! Be Sure To Setup GitHub Actions!"
+echo "!!! Be Sure To Setup Hosting At Least!"
 echo "!!! Paste Firebase App Configurations Into next.config.js File!"
 rm firebase.json;
 rm .firebaserc;
-firebase init hosting;
+firebase init;
