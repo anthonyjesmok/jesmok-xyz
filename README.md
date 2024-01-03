@@ -38,15 +38,13 @@ This project does not provide a CSS framework as the use cases for each vary gre
 
 ## JavaScript Tags, Analytics, and GTM
 
-When possible, please do not include analytics or other external monitoring scripts directly in your code, except for what is provided by Firebase and Datadog. Instead, please setup a project in Google Tag Manager and put your container ID into `next.config.js`. Scripts that are usually to be used include:
+When possible, please do not include analytics or other external monitoring scripts directly in your code, except for what is provided by Firebase. Instead, use Google Tag Manager to manage your tags. This will allow you to manage your tags in one place and also allow you to easily disable them for development and testing.
+
+Firebase generates a Google Tag Manager container for you. You can find the container ID in the Firebase console under "Integrations" > "Google Tag Manager". You can then use the container ID to configure your Google Tag Manager container in the Google Tag Manager console and control your tags from there. Situations where you may want to use Google Tag Manager include integrating with:
 
 * OpenReplay
 * Firebase Specific JS Files Based on Services Utilized (If Not Included Via Node)
 * Other Analytics Scripts
-
-### Datadog
-
-This project uses [Datadog](https://www.datadoghq.com/)'s real user monitoring (RUM) for tracking application performance and sessions. You will need to setup a Datadog service and project using [this tutorial](https://docs.datadoghq.com/real_user_monitoring/browser/#setup). The details generated for the new application will need to be added to the `next.config.js` file and replace the default Marshmallow values.
 
 ## Testing and Quality
 
@@ -64,7 +62,7 @@ This project uses [Alex](https://alexjs.com/) as an assistant to detect potentia
 
 ### CI/CD
 
-This template uses GitHub actions for CI/CD actions. This repository is configured to allow static-only deployments to Google Firebase. You can configure the CI/CD pipeline to run additional tests and deploy to other environments as well.
+This template uses GitHub actions for CI/CD actions. This repository is configured to allow static-only deployments to Google Firebase and provide monthly package updates via Node. You can configure the CI/CD pipeline to run additional tests,  deploy to other environments, and perform other actions as well.
 
 ### Security Scanning
 
@@ -72,4 +70,4 @@ This repository uses [Snyk](https://app.snyk.io/) for security screening of appl
 
 ## Deployment
 
-This  repository is automatically deployed to [this Firebase Hosting site](https://jesmok.xyz). The setup script will configure using the Firebase CLI the hosting environment for your application.
+This template repository is automatically deployed to [this Firebase Hosting site](https://marshmallow-dev-35492.web.app/). The setup script will configure using the Firebase CLI the hosting environment for your application.
