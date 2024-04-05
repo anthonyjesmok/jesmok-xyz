@@ -34,7 +34,6 @@ export default function NavHeader() {
           aria-label="Mobile Navigation"
           expanded={isSideNavExpanded}
           isPersistent={false}
-          placeholder="Mobile Navigation"
         >
           <SideNavItems>
             <HeaderSideNavItems>
