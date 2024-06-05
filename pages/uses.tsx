@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import { Grid, Column } from '@carbon/react';
+import PageLayout from '../components/layout/page/PageLayout';
 
 // export async function getStaticProps() {}
 
@@ -9,14 +9,9 @@ export default function UsesPage() {
       <Head>
         <title>Anthony Jesmok | Uses | jesmok.xyz</title>
       </Head>
-      <Grid fullWidth>
-        <Column>
-          <h1>Home</h1>
-        </Column>
-        <Column>
-          <h1>Image</h1>
-        </Column>
-      </Grid>
+      <PageLayout imageUrl="" imageAlt="uses">
+        <h1>Uses</h1>
+      </PageLayout>
     </>
   );
 }
