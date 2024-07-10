@@ -10,9 +10,9 @@
     "not op_mini all"
   ],
   "dependencies": {
-    "@carbon/react": "^1.58.1",
-    "firebase": "^10.12.2",
-    "next": "^14.2.3",
+    "@carbon/react": "^1.61.0",
+    "firebase": "^10.12.3",
+    "next": "^14.2.4",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
@@ -24,22 +24,22 @@
     "lint": "next lint --fix"
   },
   "devDependencies": {
-    "@babel/eslint-parser": "^7.24.6",
+    "@babel/eslint-parser": "^7.24.7",
     "@firebase/performance": "^0.6.6",
-    "@types/node": "^20.14.1",
+    "@types/node": "^20.14.10",
     "@types/react": "^18.3.3",
-    "@typescript-eslint/eslint-plugin": "^7.12.0",
-    "@typescript-eslint/parser": "^7.12.0",
+    "@typescript-eslint/eslint-plugin": "^7.16.0",
+    "@typescript-eslint/parser": "^7.16.0",
     "alex": "^11.0.1",
     "eslint": "^8.57.0",
     "eslint-config-airbnb": "^19.0.4",
-    "eslint-config-next": "^14.2.3",
+    "eslint-config-next": "^14.2.4",
     "eslint-plugin-import": "^2.29.1",
-    "eslint-plugin-jsx-a11y": "^6.8.0",
-    "eslint-plugin-react": "^7.34.2",
+    "eslint-plugin-jsx-a11y": "^6.9.0",
+    "eslint-plugin-react": "^7.34.3",
     "eslint-plugin-react-hooks": "^4.6.2",
-    "firebase-tools": "^13.10.2",
+    "firebase-tools": "^13.13.1",
     "husky": "^9.0.11",
-    "sass": "^1.77.4"
+    "sass": "^1.77.7"
   }
 }
