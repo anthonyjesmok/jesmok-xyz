@@ -1,49 +1,11 @@
 {
-  "env": {
-    "browser": true,
-    "es2021": true
-  },
   "extends": [
     "next/core-web-vitals",
-    "airbnb",
-    "plugin:react/recommended",
-    "plugin:react-hooks/recommended",
-    "plugin:@typescript-eslint/recommended",
-    "plugin:jsx-a11y/recommended"
+    "plugin:@typescript-eslint/recommended"
   ],
   "parser": "@typescript-eslint/parser",
-  "parserOptions": {
-    "ecmaFeatures": {
-      "jsx": true
-    },
-    "ecmaVersion": 2023,
-    "sourceType": "module"
-  },
   "rules": {
-    "react/function-component-definition": "off",
-    "react/react-in-jsx-scope": "off",
     "@next/next/no-img-element": "off",
-    "react/jsx-filename-extension": [
-      2,
-      { "extensions": [".js", ".jsx", ".ts", ".tsx"] }
-    ],
-    "react/prop-types": "off", // Disable prop-types check when using TypeScript
-    "@typescript-eslint/explicit-module-boundary-types": "off", // Allow omitting return types on functions
-    "import/extensions": [
-      "error",
-      "ignorePackages",
-      {
-        "js": "never",
-        "jsx": "never",
-        "ts": "never",
-        "tsx": "never"
-      }
-    ],
-    "import/no-unresolved": "off" // Disable unresolved import errors for TypeScript paths
-  },
-  "settings": {
-    "import/resolver": {
-      "typescript": {} // Resolve TypeScript paths properly
-    }
+    "@typescript-eslint/explicit-module-boundary-types": "off"
   }
 }

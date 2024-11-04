@@ -1,6 +1,3 @@
-echo "=== Add Template Git Remote..."
-git remote add template https://github.com/e8y-co/marshmallow.git
-git remote -v
 echo "=== Instaling NPM Global Packages..."
 npm install husky firebase-tools -g
 echo "=== Instaling NPM Packages..."
