@@ -24,7 +24,7 @@
     "lint": "next lint --fix"
   },
   "devDependencies": {
-    "@firebase/performance": "^0.6.10",
+    "@firebase/performance": "^0.6.11",
     "@types/node": "^22.x",
     "@types/react": "^18.3.12",
     "@typescript-eslint/eslint-plugin": "^8.x",
