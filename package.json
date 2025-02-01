@@ -10,7 +10,7 @@
     "not op_mini all"
   ],
   "dependencies": {
-    "@carbon/react": "^1.69.0",
+    "@carbon/react": "^1.75.0",
     "firebase": "^11.0.1",
     "next": "^15.0.2",
     "react": "^18.3.1",
