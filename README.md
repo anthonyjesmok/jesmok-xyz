@@ -1,73 +1,87 @@
-# jesmok.xyz
+# Welcome to React Router!
 
-My personal website, meant to help me organize my online presence into one location.
+A modern, production-ready template for building full-stack React applications using React Router.
 
-## Template Repository
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/remix-run/react-router-templates/tree/main/default)
 
-This project is based off of what I call "Project Marshmallow", a private template repository I use for my personal and consulting projects. In a way, this is me personally releasing my template repository to the public and would explore you to explore it as such for your own. Here is some information about the template repository I have in its README:
+## Features
 
-This is a template repository for creating new projects. It is a Next.js application with a few additional tools and configurations to help you get started. This README is a guide to help you get started with your project.
-
-The goal of this template is to provide a good starting point for new projects, but not to be a complete dictation of the intricate details of the project. You can use this template as a starting point and then modify it to fit your needs and it is expected that projects will diverge from this template over time.
-
-Running `npm start` will build static web files into the `out` folder and serve them on `localhost:3000` using Firebase's emulators. Please ensure you are logged into Firebase before running `npm start` using `firebase login`.
+- 🚀 Server-side rendering
+- ⚡️ Hot Module Replacement (HMR)
+- 📦 Asset bundling and optimization
+- 🔄 Data loading and mutations
+- 🔒 TypeScript by default
+- 🎉 TailwindCSS for styling
+- 📖 [React Router docs](https://reactrouter.com/)
 
 ## Getting Started
 
-To get started, you will need to create a new repository from this template. You can do this by clicking the "Use this template" button on the top right of the repository page. You will then be prompted to create a new repository from this template.
+### Installation
 
-To setup the template for your unique needs, you can run this command: `sh setup.sh`. This will install the dependencies, setup the Firebase project, log you into Firebase, initialize your Firebase project, and setup LHCI to run on your project.
+Install the dependencies:
 
-The [Firebase CLI](https://www.npmjs.com/package/firebase-tools) is included with this project so you can configure the `firebase.json` file for additional services as well.
+```bash
+npm install
+```
 
-## Components vs. Pages
+### Development
 
-This is the philosophy Marshmallow follows:
+Start the development server with HMR:
 
-> "I don't know too much about the details, but NextJS has optimizations at the page level. When you build a NextJS project, you will see the pages logged as part of the build. NextJS treats every component file under the pages folder as a page, so by placing non-page components in the pages folder, you are drastically increasing build time because now NextJS goes and builds every one of those components as a page." - Hans, Stack Overflow
+```bash
+npm run dev
+```
 
-We use Next.js, despite Marshmallow being more of a client-side application, because of the performance benefits of static site generation. Next.js is able to produce enterprise-level performance automatically. We also use Next.js because of the ease of use and the ability to use React components.
+Your application will be available at `http://localhost:5173`.
 
-## Styling
+## Building for Production
 
-This project does not provide a CSS framework as the use cases for each vary greatly. You can explore CSS frameworks in this [list](https://github.com/troxler/awesome-css-frameworks). We have experience with Bootstrap, PureCSS, and TailwindCSS.
+Create a production build:
 
-* TailwindCSS is the most flexible and customizable, but also the most verbose.
-* Bootstrap is the most popular and has the most documentation, but can also lead to bloat.
-* PureCSS is the most lightweight and has the least amount of documentation but can build a styled site quickly.
-
-## JavaScript Tags, Analytics, and GTM
-
-When possible, please do not include analytics or other external monitoring scripts directly in your code, except for what is provided by Firebase. Instead, use Google Tag Manager to manage your tags. This will allow you to manage your tags in one place and also allow you to easily disable them for development and testing.
-
-Firebase generates a Google Tag Manager container for you. You can find the container ID in the Firebase console under "Integrations" > "Google Tag Manager". You can then use the container ID to configure your Google Tag Manager container in the Google Tag Manager console and control your tags from there. Situations where you may want to use Google Tag Manager include integrating with:
-
-* OpenReplay
-* Firebase Specific JS Files Based on Services Utilized (If Not Included Via Node)
-* Other Analytics Scripts
-
-## Testing and Quality
-
-> "Focus on the user and all else will follow." -Google
-
-This project uses a few tools to help ensure the quality of the application. Some run on the CI/CD pipeline and others are run locally both using the CLI and git hooks with Husky.
-
-### Testing Framework
-
-This will be implemented using Jest and Puppeteer.
-
-### Alex
-
-This project uses [Alex](https://alexjs.com/) as an assistant to detect potentially non-inclusive language. It runs as a pre-commit hook using Husky on compiled HTML files but you can also run it locally using the Alex CLI.
-
-### CI/CD
-
-This template uses GitHub actions for CI/CD actions. This repository is configured to allow static-only deployments to Google Firebase and provide monthly package updates via Node. You can configure the CI/CD pipeline to run additional tests,  deploy to other environments, and perform other actions as well.
-
-### Security Scanning
-
-This repository uses [Snyk](https://app.snyk.io/) for security screening of applications. You can login to the portal to add your application repoistor(y/ies) into the screening tool. You can also run the Snyk CLI locally to test your application. Please see the [Snyk CLI documentation](https://support.snyk.io/hc/en-us/articles/360003812538-Test-your-projects-with-the-Snyk-CLI) for more information.
+```bash
+npm run build
+```
 
 ## Deployment
 
-This template repository is automatically deployed to [this Firebase Hosting site](https://marshmallow-dev-35492.web.app/). The setup script will configure using the Firebase CLI the hosting environment for your application.
+### Docker Deployment
+
+To build and run using Docker:
+
+```bash
+docker build -t my-app .
+
+# Run the container
+docker run -p 3000:3000 my-app
+```
+
+The containerized application can be deployed to any platform that supports Docker, including:
+
+- AWS ECS
+- Google Cloud Run
+- Azure Container Apps
+- Digital Ocean App Platform
+- Fly.io
+- Railway
+
+### DIY Deployment
+
+If you're familiar with deploying Node applications, the built-in app server is production-ready.
+
+Make sure to deploy the output of `npm run build`
+
+```
+├── package.json
+├── package-lock.json (or pnpm-lock.yaml, or bun.lockb)
+├── build/
+│   ├── client/    # Static assets
+│   └── server/    # Server-side code
+```
+
+## Styling
+
+This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
+
+---
+
+Built with ❤️ using React Router.
