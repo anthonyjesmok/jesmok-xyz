@@ -1,0 +1,39 @@
+{
+  "name": "jesmok-xyz",
+  "author": {
+    "name": "Anthony Jesmok"
+  },
+  "private": true,
+  "browserslist": [
+    ">0.3%",
+    "not dead",
+    "not op_mini all"
+  ],
+  "dependencies": {
+    "@carbon/react": "^1.69.0",
+    "firebase": "^11.0.1",
+    "next": "^15.0.2",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "firebase emulators:start",
+    "prepare": "husky install",
+    "lint": "next lint --fix"
+  },
+  "devDependencies": {
+    "@firebase/performance": "^0.6.10",
+    "@types/node": "^22.x",
+    "@types/react": "^18.3.12",
+    "@typescript-eslint/eslint-plugin": "^8.x",
+    "@typescript-eslint/parser": "^8.x",
+    "alex": "^11.0.1",
+    "eslint": "^9.x",
+    "eslint-config-next": "^15.0.2",
+    "firebase-tools": "^13.23.1",
+    "husky": "^9.1.6",
+    "sass": "^1.80.6"
+  }
+}

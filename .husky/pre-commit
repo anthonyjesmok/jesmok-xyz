@@ -1,0 +1,16 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+echo "## HUSKY PRE-COMMIT HOOK ##"
+
+echo "# Running Lint (Ensure Code Up To Standards)..."
+npm run lint
+
+echo "# Running Build (Ensure No Errors Since Last Build)..."
+npm run build
+
+echo "# Running Alex (Ensure Appropriate Language)..."
+alex ./out/**/*.html
+echo " "
+
+echo "## FINISHED HUSKY PRE-COMMIT HOOK ##"
