@@ -4,5 +4,6 @@
 
 # React Router
 /.react-router/
-/build/client/
-/build/server/
+/build/
+/out/client/
+/out/server/
