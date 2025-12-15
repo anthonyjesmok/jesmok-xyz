@@ -9,18 +9,18 @@ if [ $? -ne 0 ]; then
     echo "Build failed, aborting push"
     exit 1
 fi
-echo "Build successful, copying to docs/..."
-mkdir -p docs
-rm -rf docs/*
-cp -r build/client/* docs/
-git add docs/
-if git diff --cached --quiet docs/; then
-    echo "No changes in docs/, skipping commit"
+echo "Build successful, copying to build/..."
+mkdir -p build
+rm -rf build/*
+cp -r build/client/* build/
+git add build/
+if git diff --cached --quiet build/; then
+    echo "No changes in build/, skipping commit"
 else
-    echo "Committing changes to docs/"
+    echo "Committing changes to build/"
     git commit -m "Automated static build for GitHub Pages"
 fi
 echo "Pre-push hook completed."
 EOF
 chmod +x .git/hooks/pre-push
-echo "Pre-push hook installed. It will build the app and commit static files to docs/ on each push."
+echo "Pre-push hook installed. It will build the app and commit static files to build/ on each push."
