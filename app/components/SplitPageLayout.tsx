@@ -18,21 +18,23 @@ export function SplitPageLayout({
   return (
     <main className="min-h-screen bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-50">
       <div className="mx-auto flex min-h-screen max-w-[95vw] flex-col overflow-hidden md:flex-row">
-        <section className="flex w-full flex-1 flex-col justify-center gap-8 bg-slate-50 px-4 py-14 sm:px-6 lg:px-16 dark:bg-slate-950">
-          <div className="max-w-2xl">
-            <h1 className="text-4xl font-semibold font-mono tracking-tight text-slate-950 dark:text-white sm:text-5xl">
-              {title}
-            </h1>
-            <p className="mt-6 text-lg leading-8 text-slate-700 dark:text-slate-300 font-sans">
-              {description}
-            </p>
-          </div>
-
-          {children ? (
-            <div className="max-w-2xl space-y-6 text-base leading-8 text-slate-700 dark:text-slate-300 font-sans">
-              {children}
+        <section className="flex w-full flex-1 flex-col justify-start gap-8 bg-slate-50 px-4 py-14 sm:px-6 lg:px-10 xl:px-16 dark:bg-slate-950">
+          <div className="w-full">
+            <div className="max-w-3xl">
+              <h1 className="text-4xl font-semibold font-mono tracking-tight text-slate-950 dark:text-white sm:text-5xl">
+                {title}
+              </h1>
+              <p className="mt-6 text-lg leading-8 text-slate-700 dark:text-slate-300 font-sans">
+                {description}
+              </p>
             </div>
-          ) : null}
+
+            {children ? (
+              <div className="mt-10 max-w-3xl space-y-6 text-base leading-8 text-slate-700 dark:text-slate-300 font-sans">
+                {children}
+              </div>
+            ) : null}
+          </div>
         </section>
 
         <aside className="relative h-80 w-full flex-none overflow-hidden bg-slate-200 md:h-auto md:w-[30%]">
