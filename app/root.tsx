@@ -6,6 +6,7 @@ import {
   Scripts,
   ScrollRestoration,
 } from "react-router";
+import { SiteHeader } from "./components/SiteHeader";
 
 import type { Route } from "./+types/root";
 import "./app.css";
@@ -46,6 +47,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
             style={{ display: 'none', visibility: 'hidden' }}
           />
         </noscript>
+        <SiteHeader />
         {children}
         <ScrollRestoration />
         <Scripts />
