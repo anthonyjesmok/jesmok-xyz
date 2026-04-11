@@ -17,8 +17,8 @@ export function SplitPageLayout({
 }: SplitPageLayoutProps) {
   return (
     <main className="min-h-screen bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-50">
-      <div className="mx-auto flex min-h-screen max-w-[95vw] flex-col overflow-hidden md:flex-row">
-        <section className="flex w-full flex-1 flex-col justify-start gap-8 bg-slate-50 px-4 py-14 sm:px-6 lg:px-10 xl:px-16 dark:bg-slate-950">
+      <div className="flex min-h-screen w-full flex-col overflow-hidden md:flex-row">
+        <section className="flex w-full flex-1 flex-col justify-start gap-8 bg-slate-50 px-4 py-14 sm:px-6 md:px-8 lg:px-8 xl:px-12 dark:bg-slate-950">
           <div className="w-full">
             <div className="max-w-3xl">
               <h1 className="text-4xl font-semibold font-mono tracking-tight text-slate-950 dark:text-white sm:text-5xl">
@@ -37,7 +37,7 @@ export function SplitPageLayout({
           </div>
         </section>
 
-        <aside className="relative h-80 w-full flex-none overflow-hidden bg-slate-200 md:h-auto md:w-[30%]">
+        <aside className="relative h-80 w-full flex-none overflow-hidden md:h-auto md:w-[30%]">
           <div
             className="absolute inset-0 bg-cover bg-center bg-no-repeat"
             style={{ backgroundImage: `url(${imageUrl})` }}

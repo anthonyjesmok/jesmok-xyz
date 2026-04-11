@@ -14,7 +14,7 @@ export function SiteHeader() {
 
   return (
     <header className="bg-[#0b5688] text-white shadow-sm ring-1 ring-white/10">
-      <div className="mx-auto flex w-full max-w-[95vw] items-center justify-between px-4 py-4 sm:px-6 lg:px-8 xl:px-12">
+      <div className="flex w-full items-center justify-between px-4 py-4 sm:px-6 lg:px-8 xl:px-12">
         <Link
           to="/"
           className="text-lg font-semibold tracking-tight font-mono"
